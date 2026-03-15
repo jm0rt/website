@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 50px 24px;
+}
+
+.site-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1d1d1f;
+    margin-bottom: 14px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #d2d2d7;
+    margin-bottom: 40px;
+}
+
+.intro {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.photo {
+    flex-shrink: 0;
+    width: 240px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.bio {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #424245;
+}
+
+.bio p {
+    margin-bottom: 1.2em;
+}
+
+.bio a {
+    color: #0066cc;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 102, 204, 0.3);
+    transition: border-color 0.2s;
+}
+
+.bio a:hover {
+    border-bottom-color: #0066cc;
+}
+
+.papers {
+    margin-bottom: 44px;
+}
+
+.papers h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0066cc;
+    display: inline-block;
+}
+
+.papers h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+}
+
+.papers h3 a {
+    color: #0066cc;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 102, 204, 0.3);
+    transition: border-color 0.2s;
+}
+
+.papers h3 a:hover {
+    border-bottom-color: #0066cc;
+}
+
+.paper-entry {
+    font-size: 0.93rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 2px solid rgba(0, 102, 204, 0.15);
+    color: #424245;
+}
+
+.paper-entry a {
+    color: #0066cc;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 102, 204, 0.3);
+    transition: border-color 0.2s;
+}
+
+.paper-entry a:hover {
+    border-bottom-color: #0066cc;
+}
+
+@media (max-width: 600px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        width: 200px;
+    }
+
+    .site-title {
+        font-size: 1.7rem;
+    }
+}
