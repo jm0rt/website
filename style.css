@@ -143,3 +143,91 @@ body {
         font-size: 1.7rem;
     }
 }
+
+/* Accessible navigation and local migration assets; retain the original design. */
+html {
+    scroll-padding-top: 24px;
+}
+
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 20px;
+    margin: 0 0 24px;
+    font-size: 0.9rem;
+}
+
+.site-nav a,
+.site-footer a {
+    display: inline-block;
+    padding: 8px 0;
+    color: #005ebd;
+    text-underline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    padding: 10px 16px;
+    background: #ffffff;
+    color: #005ebd;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+a:focus-visible {
+    outline: 2px solid #005ebd;
+    outline-offset: 4px;
+}
+
+.bio,
+.paper-entry {
+    overflow-wrap: anywhere;
+}
+
+.site-footer {
+    border-top: 1px solid #d2d2d7;
+    padding-top: 16px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 28px 20px;
+    }
+
+    .site-nav {
+        gap: 2px 16px;
+    }
+
+    .divider {
+        margin-bottom: 28px;
+    }
+}
+
+@media print {
+    .site-nav,
+    .skip-link,
+    .site-footer {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .paper-entry {
+        break-inside: avoid;
+    }
+}
